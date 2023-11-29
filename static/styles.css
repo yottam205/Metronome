@@ -1,0 +1,312 @@
+body {
+    font-family: Helvetica, sans-serif;
+    background-color: #FAF8ED;
+    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container Style */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Section Styling */
+.metronome, .subject-section, .timer-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    flex: 1;
+    background-color: #FFFBF5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+h1, h2 {
+    color: black; 
+    margin-bottom: 15px;
+}
+
+/* metronome controls */
+.metronome-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+}
+
+.time-signature-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-grow: 0; 
+    flex-shrink: 0; 
+}
+
+.bpm-display {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-grow: 0; 
+    flex-shrink: 0; 
+}
+
+
+.bpm-display span, .time-signature-section span {
+    font-size: 30px; 
+    line-height: 1;
+}
+   
+
+.play-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#bpmLabel {
+    font-size: 14px;
+    font-weight: bold; /* Make the font bold */
+    align-self: flex-end;
+}
+
+/* Styling for BPM value, time signature, play button */
+.bpm-display, #bpmValue, #numberOfBeatsDisplay, #beatSubdivisionDisplay, .time-signature-slash, button.play, button.pause {
+    font-size: 40px;
+    line-height: 1;
+}
+
+/* Improved Button Styling */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    background-color: #f8e4c4; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a89a4a; 
+}
+
+button.play, button.pause {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button.play {
+    background-color: #4CAF50;
+    background-image: url('/static/assets/playpausebuttons/Play-icon.png'); /* Update the path to your play button image */
+}
+
+button.pause {
+    background-color: #FF5722;
+    background-image: url('/static/assets/playpausebuttons/Pause-icon.png'); /* Update the path to your pause button image */
+}
+
+.slider-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+/* Ensure the hidden selects do not take space */
+#numberOfBeats, #beatSubdivision {
+    display: none;
+}
+
+/* Styles for beat indicators */
+#beatsContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.beat {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: grey;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.beat.semi-accented {
+    background-color: aqua;
+}
+
+.beat.accented {
+    background-color: rgb(83, 83, 245);
+}
+
+#side-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    padding: 20px;
+    display: none;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+}
+
+#side-menu.show {
+    display: block;
+    transform: translateX(0);
+}
+
+
+.subject-section {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.highlight {
+    background-color: rgb(255, 255, 158);  
+}
+
+.timer-button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 5px;
+}
+
+/* Timer buttons */
+#startTimerButton {
+    background-color: #9cd09e; 
+    background-image: url('/static/assets/playpausebuttons/Play-icon.png'); 
+}
+
+#pauseTimerButton {
+    background-color: #e2cf95; 
+    background-image: url('/static/assets/playpausebuttons/Pause-icon.png'); 
+}
+
+#stopTimerButton {
+    background-color: #d59e9a; 
+    background-image: url('/static/assets/playpausebuttons/Stop-icon.png'); 
+}
+
+/* Timer Button Hover Effect */
+.timer-button:hover {
+    background-color: #388E3C; 
+}
+#startTimerButton:hover {
+    background-color: #388E3C; 
+}
+
+#pauseTimerButton:hover {
+    background-color: #FFB300; 
+}
+
+#stopTimerButton:hover {
+    background-color: #D32F2F; 
+}
+
+/* Timer's numbers */
+#minutes, #seconds, #timerColon {
+    font-size: 48px;
+    color: #333; 
+}
+
+/* Input Field Styling */
+input[type="text"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    width: calc(100% - 22px); 
+}
+
+
+.subject {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border: none;
+    margin: 5px 0;
+}
+
+.subject > span {
+    flex-grow: 1; 
+    margin-right: 10px; 
+}
+
+/* Editing buttons */
+.edit-button, .save-button, .delete-button {
+    padding: 5px 10px;
+    margin-left: 5px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #e2cf95; 
+    color: white;
+}
+
+.save-button {
+    background-color: #9cd09e; 
+    color: white;
+}
+
+.delete-button {
+    background-color: #d59e9a; 
+    color: white;
+}
+
+
+.action-button {
+    padding: 5px 10px;
+    margin-left: 5px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #9cd09e; 
+    color: white;
+    
+}
+
+.action-button:hover {
+    background-color: #388E3C; 
+}
+
+.subject, .your-form-container-class { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

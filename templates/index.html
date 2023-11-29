@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}Metronome{% endblock %}
+
+{% block content %}
+{{ super() }}  
+<div class="container">
+    <div class="subject-section">
+        <h2>Add Subject</h2>
+        <!-- Subject-section -->
+        <form id="addSubjectForm">
+            <input type="text" id="subjectName" placeholder="Subject Name" required>
+            <button type="submit" class="action-button">Add Subject</button>
+        </form>
+
+        <h3>Your Subjects</h3>
+        <ul id="subjectList">
+        </ul>
+    </div>
+    <!-- Metronome section -->
+    <div class="metronome">
+        <h1>Metronome</h1>
+        <div class="play-button">
+            <button id="playPauseButton" class="play"></button>
+        </div>
+        <!-- Time signature section -->
+        <div class="time-signature-section">
+            <span id="numberOfBeatsDisplay" contenteditable="true">4</span>
+            <span class="time-signature-slash">/</span>
+            <span id="beatSubdivisionDisplay">4</span>
+            <select id="numberOfBeats"></select>
+            <select id="beatSubdivision"></select>
+        </div>
+        <!-- BPM and beats sections -->
+        <div class="bpm-section">
+            <div class="bpm-display">
+                <span id="bpmLabel">BPM</span>
+                <span id="bpmValue" contenteditable="true" readonly>120</span>
+            </div>
+            <div id="beatsContainer"></div>
+            <div class="slider-container">
+                <input type="range" id="bpmSlider" min="10" max="700" value="120">
+            </div>
+        </div>
+    </div>
+    <!-- Timer section -->
+    <div class="timer-section">
+        <h2>Timer</h2>
+        <div id="timer">
+            <span id="minutes" contenteditable="true">00</span>
+            <span id="timerColon" class="timer-colon">:</span>
+            <span id="seconds" contenteditable="true">00</span>
+        </div>
+        <div class="timer-buttons">
+            <button id="startTimerButton" class="timer-button"></button>
+            <button id="pauseTimerButton" class="timer-button"></button>
+            <button id="stopTimerButton" class="timer-button"></button>
+        </div>
+    </div>       
+</div>
+
+
+<script src="/static/metronome.js"></script>
+{% endblock %}
