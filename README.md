@@ -62,3 +62,10 @@ With your virtual environment activated, install the required packages using pip
 Each 'pip install' command fetches the latest version of the package from PyPI (Python Package Index) and installs it in your virtual environment.
 
 Remember to activate your virtual environment each time you work on your project to ensure you're using the right Python interpreter and dependencies.
+
+<img width="1440" alt="Screenshot 2024-05-03 at 14 34 55" src="https://github.com/yottam205/Metronome/assets/117525375/3058118b-4fd1-40fc-9121-c4af8cee2de4">
+<img width="1440" alt="Screenshot 2024-05-03 at 14 35 09" src="https://github.com/yottam205/Metronome/assets/117525375/849df9a4-3b95-4ed4-a3d7-67c71643f061">
+<img width="1440" alt="Screenshot 2024-05-03 at 14 36 36" src="https://github.com/yottam205/Metronome/assets/117525375/f6d7726b-e17f-4ab7-b659-5cbc2cd283ca">
+<img width="1440" alt="Screenshot 2024-05-03 at 14 36 54" src="https://github.com/yottam205/Metronome/assets/117525375/72169af6-08ff-42dc-97df-568e2d721b6a">
+
+
