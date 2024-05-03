@@ -1,5 +1,6 @@
 # Simple Metronome
 #### Video Demo:  <https://www.youtube.com/watch?v=NdhoxJhQmlM>
+#### Example pitcures below
 #### Description: A simple and easy to use metronome
 
 ##### You can choose the time signature
